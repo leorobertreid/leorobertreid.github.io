@@ -1,0 +1,64 @@
+body, * {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: monospace;
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+header, header .div-a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header {
+    padding: 12px;
+    height: 50px;
+    border-bottom: 2px var(--light) dashed;
+}
+
+header img {
+    height: 100%;
+    margin-right: 10px;
+}
+
+header .div-a {
+    height: 75%;
+}
+
+header h1 {
+    font-weight: 400;
+}
+
+a {
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+a, a:visited {
+    color: var(--light);
+}
+
+a:hover {
+    background-color: var(--least-light);
+}
+
+a:active {
+    background-color: var(--less-light);
+}
+
+:root {
+    --dark: black;
+    --medium-light: rgb(235, 235, 235);
+    --less-light: rgb(226, 226, 226);
+    --least-light: rgb(196, 196, 196);
+    --light: white;
+}
