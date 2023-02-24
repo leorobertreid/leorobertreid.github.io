@@ -48,17 +48,101 @@ a, a:visited {
 }
 
 a:hover {
-    background-color: var(--least-light);
+    background-color: var(--light);
+    color: var(--dark);
+    cursor: pointer;
+}
+
+header a:hover, .mobile-menu a:hover {
+    background-color: var(--github-light);
+}
+
+header a:active, .mobile-menu a:hover {
+    background-color: var(--github-light);
 }
 
 a:active {
-    background-color: var(--less-light);
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0%;
+    height: 50px;
+    width: 100%;
+    border-top: 2px dashed var(--light);
+    padding: 5px;
+}
+.mobile-menu a {
+    font-size: 13px;
+}
+
+.mobile-menu img {
+    position: fixed;
+    right: 15px;
+    width: 40px;
+    margin-left: -50px;
+}
+
+#menu-button-mobile {
+    transition: 0.5s;
+    padding: 4px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+#menu-button-mobile:hover {
+    cursor: pointer;
+    filter: invert(100%);
+    background-color: var(--dark);
+}
+
+.mobile .mobile-links {
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    top: 25%;
+}
+
+.mobile-links a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    header {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /* For computers: */
+    .mobile-menu {
+        visibility: hidden;
+        display: none;
+    }
+    .mobile-links {
+        visibility: hidden;
+        display: none;
+    }
 }
 
 :root {
     --dark: black;
-    --medium-light: rgb(235, 235, 235);
-    --less-light: rgb(226, 226, 226);
-    --least-light: rgb(196, 196, 196);
     --light: white;
+    --github-light: rgb(240,240,240);
+    --orange: rgb(218,125,86);
 }
